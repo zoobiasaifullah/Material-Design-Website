@@ -47,7 +47,7 @@ At the end, the AI will create a "collaboration story" page where it reflects on
 
 Pick ONE style that excites you. You'll spend a week with it, so choose something that genuinely interests you.
 
-**📖 [View all style guides →](style-guides/)**
+**📖 [View all 15 style guides →](style-guides/)**
 
 ### Reactions Against Swiss Design
 
@@ -55,37 +55,38 @@ Pick ONE style that excites you. You'll spend a week with it, so choose somethin
 |-------|-------|------|------------|
 | **Neo-Brutalism** | **[📖 Read Guide](style-guides/NEO-BRUTALISM-GUIDE.md)** | Raw, honest, anti-corporate | ⭐⭐ Medium |
 | **Swiss Punk/New Wave** | **[📖 Read Guide](style-guides/SWISS-PUNK-GUIDE.md)** | Kinetic, expressive, layered | ⭐⭐⭐ Advanced |
-| **Deconstructivist** | Research independently | Fragmented, emotional, anti-grid | ⭐⭐⭐ Advanced |
+| **Deconstructivist/Grunge** | **[📖 Read Guide](style-guides/DECONSTRUCTIVIST-GRUNGE-GUIDE.md)** | Fragmented, emotional, anti-grid | ⭐⭐⭐ Advanced |
 
 ### Humanized Descendants
 
 | Style | Guide | Vibe | Difficulty |
 |-------|-------|------|------------|
 | **Nordic Minimalism** | **[📖 Read Guide](style-guides/NORDIC-MINIMALISM-GUIDE.md)** | Calm, spacious, natural | ⭐⭐ Medium |
-| **Humanist Modernism** | Research independently | Warm, readable, empathetic | ⭐⭐ Medium |
-| **Editorial Swiss** | Research independently | Long-form, hierarchy, reading | ⭐⭐ Medium |
-| **ISOTYPE** | Research independently | Pictograms, data viz, symbolic | ⭐⭐⭐ Advanced |
+| **Humanist Modernism** | **[📖 Read Guide](style-guides/HUMANIST-MODERNISM-GUIDE.md)** | Warm, readable, empathetic | ⭐⭐ Medium |
+| **Editorial Swiss** | **[📖 Read Guide](style-guides/EDITORIAL-SWISS-GUIDE.md)** | Long-form, hierarchy, reading | ⭐⭐ Medium |
+| **ISOTYPE** | **[📖 Read Guide](style-guides/ISOTYPE-GUIDE.md)** | Pictograms, data viz, symbolic | ⭐⭐⭐ Advanced |
 
 ### Digital Evolutions
 
 | Style | Guide | Vibe | Difficulty |
 |-------|-------|------|------------|
 | **Material Design** | **[📖 Read Guide](style-guides/MATERIAL-DESIGN-GUIDE.md)** | Colorful, elevated, motion-rich | ⭐⭐⭐ Advanced |
-| **Flat Design** | Research independently | Clean, colorful, UI-focused | ⭐ Accessible |
-| **Fluent/Metro** | Research independently | Typographic, grid-based | ⭐⭐ Medium |
-| **Neo-Swiss** | Research independently | Contemporary, responsive | ⭐ Accessible |
+| **Flat Design** | **[📖 Read Guide](style-guides/FLAT-DESIGN-GUIDE.md)** | Clean, colorful, UI-focused | ⭐ Accessible |
+| **Fluent/Metro** | **[📖 Read Guide](style-guides/FLUENT-METRO-GUIDE.md)** | Typographic, grid-based | ⭐⭐ Medium |
+| **Neo-Swiss** | **[📖 Read Guide](style-guides/NEO-SWISS-GUIDE.md)** | Contemporary, responsive | ⭐ Accessible |
 
 ### Systemic Descendants
 
 | Style | Guide | Vibe | Difficulty |
 |-------|-------|------|------------|
-| **Corporate Modernism** | Research independently | Professional, systematic | ⭐⭐ Medium |
-| **Vignelli Transit** | Research independently | Functional, wayfinding, civic | ⭐⭐⭐ Advanced |
-| **Ulm School** | Research independently | Scientific, rational, semiotics | ⭐⭐⭐ Advanced |
-| **Dutch Rational** | Research independently | Modular, computational | ⭐⭐⭐ Advanced |
+| **Corporate Modernism** | **[📖 Read Guide](style-guides/CORPORATE-MODERNISM-GUIDE.md)** | Professional, systematic | ⭐⭐ Medium |
+| **Vignelli Transit** | **[📖 Read Guide](style-guides/VIGNELLI-TRANSIT-GUIDE.md)** | Functional, wayfinding, civic | ⭐⭐⭐ Advanced |
+| **Ulm School/HfG Ulm** | **[📖 Read Guide](style-guides/ULM-SCHOOL-GUIDE.md)** | Scientific, rational, semiotics | ⭐⭐⭐ Advanced |
+| **Dutch Rational** | **[📖 Read Guide](style-guides/DUTCH-RATIONAL-MODERNISM-GUIDE.md)** | Modular, computational | ⭐⭐⭐ Advanced |
 
-**✅ 4 comprehensive guides complete** • 11 styles available for independent research  
-**[View style guides directory →](style-guides/)** for research templates and tips
+**✅ ALL 15 comprehensive style guides complete!** (300+ pages total)  
+**Each guide:** 15-25 pages • Historical context • Visual specs • AI prompts • Authenticity checklists  
+**[View style guides directory →](style-guides/)**
 
 ---
 
