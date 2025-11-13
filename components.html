@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components | Material Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="material-icons-round">layers</i>
+                    </div>
+                    <span class="logo-text">Material Design</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                    <a href="components.html" class="nav-link active">
+                        <span>Components</span>
+                    </a>
+                    <a href="guidelines.html" class="nav-link">
+                        <span>Guidelines</span>
+                    </a>
+                    <a href="resources.html" class="nav-link">
+                        <span>Resources</span>
+                    </a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="material-icons-round">dark_mode</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Components</h1>
+            <p>Build faster with reusable, customizable components that follow Material Design 3 guidelines</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="component-showcase">
+                <div class="component-item">
+                    <h3>Buttons</h3>
+                    <div class="showcase-preview">
+                        <button class="btn btn-primary">Filled Button</button>
+                        <button class="btn btn-outlined">Outlined Button</button>
+                    </div>
+                    <p>Buttons help people initiate actions, from sending an email, to sharing a document, to liking a post.</p>
+                </div>
+
+                <div class="component-item">
+                    <h3>Cards</h3>
+                    <div class="showcase-preview">
+                        <div class="sample-card">
+                            <div class="sample-card-header">Card Header</div>
+                            <div class="sample-card-content">Card content goes here with supporting text</div>
+                        </div>
+                    </div>
+                    <p>Cards contain content and actions about a single subject.</p>
+                </div>
+
+                <div class="component-item">
+                    <h3>FAB (Floating Action Button)</h3>
+                    <div class="showcase-preview">
+                        <button class="sample-fab">
+                            <i class="material-icons-round">add</i>
+                        </button>
+                    </div>
+                    <p>The FAB represents the primary action of a screen.</p>
+                </div>
+
+                <div class="component-item">
+                    <h3>Navigation</h3>
+                    <div class="showcase-preview">
+                        <div class="sample-nav">
+                            <span class="sample-nav-item">Home</span>
+                            <span class="sample-nav-item active">Components</span>
+                            <span class="sample-nav-item">About</span>
+                        </div>
+                    </div>
+                    <p>Navigation helps users move through your app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="material-icons-round">layers</i>
+                        <span>Material Design</span>
+                    </div>
+                    <p>Google's design system for creating beautiful, usable products.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Material Design Educational Resource. Styled with Material Design 3</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="fab" id="fab" aria-label="Scroll to top">
+        <i class="material-icons-round">arrow_upward</i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

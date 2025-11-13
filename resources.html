@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Material Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="material-icons-round">layers</i>
+                    </div>
+                    <span class="logo-text">Material Design</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span>Home</span>
+                    </a>
+                    <a href="components.html" class="nav-link">
+                        <span>Components</span>
+                    </a>
+                    <a href="guidelines.html" class="nav-link">
+                        <span>Guidelines</span>
+                    </a>
+                    <a href="resources.html" class="nav-link active">
+                        <span>Resources</span>
+                    </a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="material-icons-round">dark_mode</i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Resources</h1>
+            <p>Tools, libraries, and assets to help you build with Material Design</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">description</i>
+                        <h3>Official Documentation</h3>
+                    </div>
+                    <p>Comprehensive guidelines and specifications for Material Design 3</p>
+                    <a href="https://m3.material.io/" target="_blank" class="resource-link">
+                        Visit Documentation
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">code</i>
+                        <h3>GitHub Repositories</h3>
+                    </div>
+                    <p>Open-source Material components for web, Android, iOS, and Flutter</p>
+                    <a href="https://github.com/material-components" target="_blank" class="resource-link">
+                        View on GitHub
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">design_services</i>
+                        <h3>Figma Design Kit</h3>
+                    </div>
+                    <p>Official Material Design 3 kit with all components and tokens</p>
+                    <a href="https://www.figma.com/@materialdesign" target="_blank" class="resource-link">
+                        Get Figma Kit
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">font_download</i>
+                        <h3>Google Fonts</h3>
+                    </div>
+                    <p>Free, open-source fonts including Roboto and Google Sans</p>
+                    <a href="https://fonts.google.com/" target="_blank" class="resource-link">
+                        Browse Fonts
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">image</i>
+                        <h3>Material Icons</h3>
+                    </div>
+                    <p>2,000+ icons in five different styles for your projects</p>
+                    <a href="https://fonts.google.com/icons" target="_blank" class="resource-link">
+                        Browse Icons
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="material-icons-round">palette</i>
+                        <h3>Color Tool</h3>
+                    </div>
+                    <p>Create, share, and apply color palettes to your UI</p>
+                    <a href="https://material.io/resources/color/" target="_blank" class="resource-link">
+                        Open Color Tool
+                        <i class="material-icons-round">open_in_new</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="material-icons-round">layers</i>
+                        <span>Material Design</span>
+                    </div>
+                    <p>Google's design system for creating beautiful, usable products.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Material Design Educational Resource. Styled with Material Design 3</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="fab" id="fab" aria-label="Scroll to top">
+        <i class="material-icons-round">arrow_upward</i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
