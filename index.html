@@ -1,144 +1,217 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Design | Google Design System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #6750A4; --primary-bg: #EADDFF; --surface: #FFFBFE; --text: #1C1B1F;
-            --surface-var: #E7E0EC; --outline: #79747E; --bg: #FFFBFE;
-        }
-        body.dark {
-            --primary: #D0BCFF; --primary-bg: #4F378B; --surface: #1C1B1F; --text: #E6E1E5;
-            --surface-var: #49454F; --outline: #938F99; --bg: #1C1B1F;
-        }
-        body { font-family: Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; transition: all 0.3s; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        nav { position: fixed; top: 0; left: 0; right: 0; background: var(--surface); box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000; }
-        .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .logo { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 500; color: var(--primary); }
-        .links { display: flex; gap: 4px; }
-        .links a { padding: 10px 16px; color: var(--text); text-decoration: none; border-radius: 20px; transition: all 0.2s; }
-        .links a:hover { background: var(--primary-bg); }
-        .theme-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--surface-var); color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
-        .theme-btn:hover { background: var(--primary); color: white; }
-        .hero { margin-top: 64px; min-height: calc(100vh - 64px); display: flex; align-items: center; background: linear-gradient(135deg, var(--primary-bg), var(--surface-var)); text-align: center; padding: 80px 24px; }
-        .hero h1 { font-size: clamp(48px, 8vw, 72px); font-weight: 700; margin-bottom: 24px; }
-        .hero p { font-size: clamp(18px, 3vw, 24px); margin-bottom: 32px; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .btn { padding: 12px 24px; border-radius: 24px; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
-        .btn-primary { background: var(--primary); color: white; box-shadow: 0 2px 8px rgba(0,0,0,0.2); margin-right: 16px; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
-        .section { padding: 80px 0; }
-        .section-alt { background: var(--surface); }
-        h2 { font-size: clamp(32px, 5vw, 48px); text-align: center; margin-bottom: 48px; font-weight: 700; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .card { background: var(--surface); border-radius: 24px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.15); transform: translateY(-8px); }
-        .card .material-icons { font-size: 48px; color: var(--primary); margin-bottom: 16px; }
-        .card h3 { font-size: 20px; margin-bottom: 12px; font-weight: 600; }
-        .fab { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 16px; background: var(--primary); color: white; border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.3); cursor: pointer; display: none; align-items: center; justify-content: center; z-index: 999; }
-        .fab.show { display: flex; }
-        footer { background: var(--surface); padding: 40px 0; text-align: center; }
-        @media (max-width: 768px) { .links { display: none; } }
-        html { scroll-behavior: smooth; }
-    </style>
+    <title>Material Design | Google''s Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav><div class="container"><div class="nav">
-        <div class="logo"><i class="material-icons">layers</i><span>Material Design</span></div>
-        <div class="links">
-            <a href="#about">About</a>
-            <a href="#system">System</a>
-        </div>
-        <button class="theme-btn" id="theme"><i class="material-icons">dark_mode</i></button>
-    </div></div></nav>
-    
-    <section class="hero"><div class="container">
-        <h1>Material Design</h1>
-        <p>Google's design system for creating intuitive, beautiful, and unified experiences across platforms.</p>
-        <a href="#about" class="btn btn-primary">Learn More<i class="material-icons">arrow_forward</i></a>
-    </div></section>
-    
-    <section id="about" class="section"><div class="container">
-        <h2>What is Material Design?</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="material-icons">palette</i>
-                <h3>Material is the Metaphor</h3>
-                <p>Inspired by the physical world and textures, reflecting light and casting shadows.</p>
-            </div>
-            <div class="card">
-                <i class="material-icons">star</i>
-                <h3>Bold & Intentional</h3>
-                <p>Grounded in print design principles to create hierarchy and meaning.</p>
-            </div>
-            <div class="card">
-                <i class="material-icons">animation</i>
-                <h3>Motion Provides Meaning</h3>
-                <p>Motion respects the user as the prime mover of the experience.</p>
-            </div>
-        </div>
-    </div></section>
-    
-    <section id="system" class="section section-alt"><div class="container">
-        <h2>The Design System</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="material-icons">color_lens</i>
-                <h3>Color System</h3>
-                <p>Dynamic color schemes with light and dark theme support.</p>
-            </div>
-            <div class="card">
-                <i class="material-icons">text_fields</i>
-                <h3>Typography</h3>
-                <p>Roboto font providing readable text hierarchies.</p>
-            </div>
-            <div class="card">
-                <i class="material-icons">widgets</i>
-                <h3>Components</h3>
-                <p>Reusable UI components with detailed specifications.</p>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="material-icons-round">layers</i>
+                    </div>
+                    <span class="logo-text">Material Design</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">
+                        <span>About</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#principles" class="nav-link">
+                        <span>Principles</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#evolution" class="nav-link">
+                        <span>Evolution</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                    <a href="#system" class="nav-link">
+                        <span>System</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="material-icons-round">dark_mode</i>
+                    <div class="ripple"></div>
+                </button>
             </div>
         </div>
-    </div></section>
-    
-    <footer><div class="container">
-        <p>&copy; 2024 Material Design Educational Resource</p>
-    </div></footer>
-    
-    <button class="fab" id="fab"><i class="material-icons">arrow_upward</i></button>
-    
-    <script>
-        const theme = document.getElementById('theme');
-        const fab = document.getElementById('fab');
-        const body = document.body;
-        const saved = localStorage.getItem('theme');
-        if (saved === 'dark') {
-            body.classList.add('dark');
-            theme.querySelector('i').textContent = 'light_mode';
-        }
-        theme.onclick = () => {
-            body.classList.toggle('dark');
-            const dark = body.classList.contains('dark');
-            theme.querySelector('i').textContent = dark ? 'light_mode' : 'dark_mode';
-            localStorage.setItem('theme', dark ? 'dark' : 'light');
-        };
-        window.onscroll = () => {
-            fab.classList.toggle('show', window.scrollY > 300);
-        };
-        fab.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.onclick = e => {
-                const href = a.getAttribute('href');
-                if (href === '#') return;
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) window.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
-            };
-        });
-    </script>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="material-icons-round">celebration</i>
+                    <span>Google Design System</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="word">Material</span>
+                    <span class="word">Design</span>
+                </h1>
+                <p class="hero-subtitle">Create bold, beautiful experiences with a design system that adapts to every platform, device, and user.</p>
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-primary">
+                        <span>Explore Now</span>
+                        <i class="material-icons-round">arrow_forward</i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="#principles" class="btn btn-outlined">
+                        <i class="material-icons-round">play_circle</i>
+                        <span>Watch Video</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3B+</div>
+                        <div class="stat-label">Active Devices</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Evolution</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Components</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Philosophy</div>
+                <h2>What is Material Design?</h2>
+                <p class="section-subtitle">A design language that combines classic principles with innovation and technology</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="material-icons-round">palette</i>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3>Material is the Metaphor</h3>
+                    <p>Inspired by the physical world and its textureshow they reflect light and cast shadows. Material surfaces reimagine paper and ink.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="material-icons-round">star</i>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3>Bold, Graphic, Intentional</h3>
+                    <p>Grounded in print-based designtypography, grids, space, scale, and colorto create hierarchy, meaning, and focus.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="material-icons-round">motion_photos_on</i>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <h3>Motion Provides Meaning</h3>
+                    <p>Motion respects the user as the prime mover. Actions are inflection points that initiate motion and transform the design.</p>
+                    <div class="card-hover-effect"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="principles" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Core Concepts</div>
+                <h2>Design Principles</h2>
+                <p class="section-subtitle">The foundation of Material Design''s unified experience</p>
+            </div>
+            
+            <div class="principles-container">
+                <div class="principle-card" data-aos="slide-right">
+                    <div class="principle-number">
+                        <span>01</span>
+                        <div class="number-bg"></div>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Create a Visual Language</h3>
+                        <p>Synthesize classic principles of good design with innovation and technology. Material Design combines timeless design with cutting-edge possibilities.</p>
+                    </div>
+                </div>
+                
+                <div class="principle-card" data-aos="slide-left">
+                    <div class="principle-number">
+                        <span>02</span>
+                        <div class="number-bg"></div>
+                    </div>
+                    <div class="principle-content">
+                        <h3>Unified System</h3>
+                        <p>A single underlying system allows for a cohesive experience across platforms and device sizes. Mobile precepts are fundamental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="material-icons-round">layers</i>
+                        <span>Material Design</span>
+                    </div>
+                    <p>Google''s design system for creating beautiful, usable products.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Material Design Educational Resource. Styled with  using Material Design 3</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="fab" id="fab" aria-label="Scroll to top">
+        <i class="material-icons-round">arrow_upward</i>
+        <div class="fab-ripple"></div>
+    </button>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
