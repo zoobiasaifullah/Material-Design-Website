@@ -920,6 +920,15 @@ body.dark .navbar {
     .principle-card {
         flex-direction: column;
     }
+    
+    .guidelines-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .guideline-card {
+        padding: 28px;
+    }
 }
 
 /* Page Header */
@@ -1051,74 +1060,83 @@ body.dark .navbar {
 /* Guidelines Grid */
 .guidelines-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .guideline-card {
     background: var(--surface);
-    border-radius: 24px;
-    padding: 32px;
+    border-radius: 28px;
+    padding: 40px;
     border: 1px solid var(--outline);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px var(--shadow);
 }
 
 .guideline-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--shadow);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px var(--shadow);
+    border-color: var(--primary);
 }
 
 .guideline-icon {
-    width: 56px;
-    height: 56px;
-    background: var(--primary-bg);
-    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--primary) 100%);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(103, 80, 164, 0.2);
 }
 
 .guideline-icon i {
-    font-size: 28px;
-    color: var(--primary);
+    font-size: 32px;
+    color: white;
 }
 
 .guideline-card h3 {
     font-family: "Google Sans", "Roboto", sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: var(--text);
+    letter-spacing: -0.01em;
 }
 
 .guideline-card > p {
     color: var(--text-secondary);
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 24px;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 .guideline-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .guideline-list li {
     color: var(--text-secondary);
     font-size: 14px;
-    padding: 8px 0;
-    padding-left: 24px;
+    padding: 10px 0;
+    padding-left: 28px;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .guideline-list li::before {
-    content: "";
+    content: "→";
     color: var(--primary);
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: bold;
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 10px;
 }
 
 /* Resources Grid */
