@@ -2,6 +2,8 @@
     const themeToggle = document.getElementById("themeToggle");
     const fab = document.getElementById("backToTop") || document.getElementById("fab");
     const navbar = document.getElementById("navbar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
     // Theme toggle with View Transitions API
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -32,6 +34,31 @@
                 isDark ? "light_mode" : "dark_mode"
             }</i>`;
         }
+    }
+
+    // Mobile menu toggle
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a link
+        const navLinkItems = navLinks.querySelectorAll(".nav-link");
+        navLinkItems.forEach(link => {
+            link.addEventListener("click", () => {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                menuToggle.classList.remove("active");
+                navLinks.classList.remove("active");
+            }
+        });
     }
 
     // Navbar scroll effect with passive listeners for performance
@@ -109,15 +136,17 @@
     const timelineItems = document.querySelectorAll(".timeline-item");
     if (timelineItems.length > 0 && "IntersectionObserver" in window) {
         const timelineObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+                    // Add stagger effect
+                    setTimeout(() => {
+                        entry.target.classList.add("visible");
+                    }, index * 100);
                 }
             });
         }, {
             threshold: 0.2,
-            rootMargin: "0px"
+            rootMargin: "0px 0px -100px 0px"
         });
 
         timelineItems.forEach((item) => {
