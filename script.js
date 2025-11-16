@@ -41,14 +41,35 @@
     
     if (menuToggle && navLinks) {
         menuToggle.addEventListener("click", (e) => {
+            e.preventDefault();
             e.stopPropagation();
+            
+            // Toggle classes
             menuToggle.classList.toggle("active");
             navLinks.classList.toggle("active");
+            
+            const isActive = navLinks.classList.contains("active");
+            
             if (menuOverlay) {
                 menuOverlay.classList.toggle("active");
             }
+            
             // Prevent body scroll when menu is open
-            document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+            document.body.style.overflow = isActive ? "hidden" : "";
+            
+            // Add staggered animation to menu items
+            if (isActive) {
+                const navLinkItems = navLinks.querySelectorAll(".nav-link");
+                navLinkItems.forEach((link, index) => {
+                    link.style.opacity = "0";
+                    link.style.transform = "translateX(20px)";
+                    setTimeout(() => {
+                        link.style.transition = "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                        link.style.opacity = "1";
+                        link.style.transform = "translateX(0)";
+                    }, 100 + (index * 80));
+                });
+            }
         });
 
         // Close menu when clicking on a link
@@ -74,6 +95,10 @@
             }
             document.body.style.overflow = "";
         }
+    } else {
+        console.warn("Menu toggle or nav links not found");
+        if (!menuToggle) console.warn("menuToggle is null");
+        if (!navLinks) console.warn("navLinks is null");
     }
 
     // Navbar scroll effect with passive listeners for performance
