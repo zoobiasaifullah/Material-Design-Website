@@ -37,28 +37,43 @@
     }
 
     // Mobile menu toggle
+    const menuOverlay = document.getElementById("menuOverlay");
+    
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
             menuToggle.classList.toggle("active");
             navLinks.classList.toggle("active");
+            if (menuOverlay) {
+                menuOverlay.classList.toggle("active");
+            }
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
         });
 
         // Close menu when clicking on a link
         const navLinkItems = navLinks.querySelectorAll(".nav-link");
         navLinkItems.forEach(link => {
             link.addEventListener("click", () => {
-                menuToggle.classList.remove("active");
-                navLinks.classList.remove("active");
+                closeMenu();
             });
         });
 
-        // Close menu when clicking outside
-        document.addEventListener("click", (e) => {
-            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                menuToggle.classList.remove("active");
-                navLinks.classList.remove("active");
+        // Close menu when clicking overlay
+        if (menuOverlay) {
+            menuOverlay.addEventListener("click", () => {
+                closeMenu();
+            });
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove("active");
+            navLinks.classList.remove("active");
+            if (menuOverlay) {
+                menuOverlay.classList.remove("active");
             }
-        });
+            document.body.style.overflow = "";
+        }
     }
 
     // Navbar scroll effect with passive listeners for performance
